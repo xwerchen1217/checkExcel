@@ -1,0 +1,162 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #0ea5e9;
+  --primary-hover: #0284c7;
+  --border: #d1d5db;
+  --success: #16a34a;
+  --danger: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #eef4ff 0%, #f7fbff 50%, #eefaf7 100%);
+}
+
+.container {
+  width: min(1400px, 96vw);
+  margin: 24px auto;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 24px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+button {
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.table-wrap {
+  overflow: auto;
+  max-height: 68vh;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px;
+  font-size: 13px;
+  vertical-align: top;
+  text-align: left;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #f8fafc;
+  z-index: 1;
+}
+
+.preview {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.note-input,
+select {
+  width: 140px;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.pagination {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.badge.ok {
+  background: #dcfce7;
+  color: var(--success);
+}
+
+.badge.reject {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .note-input,
+  select {
+    width: 110px;
+  }
+
+  th,
+  td {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

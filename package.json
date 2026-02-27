@@ -1,0 +1,9 @@
+{
+  "name": "review-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "打标数据审核网页端",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

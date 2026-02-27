@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>打标数据审核</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>打标数据审核平台</h1>
+        <div class="toolbar">
+          <input type="file" id="fileInput" accept=".xlsx,.xls,.csv" />
+          <button id="uploadBtn" disabled>上传并开始审核</button>
+          <button id="exportBtn" disabled>导出审核结果</button>
+          <span id="saveStatus"></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="meta">
+          <span>文件：<strong id="fileName">-</strong></span>
+          <span>总商品数：<strong id="totalRows">0</strong></span>
+          <span>当前页：<strong id="currentPage">1</strong></span>
+          <span>会话ID：<strong id="sessionId">-</strong></span>
+        </div>
+      </div>
+
+      <div class="card hidden" id="tableCard">
+        <div class="table-wrap">
+          <table id="dataTable"></table>
+        </div>
+        <div class="pagination">
+          <button id="prevBtn">上一页</button>
+          <button id="nextBtn">下一页</button>
+          <span id="pageInfo">第 1 / 1 页</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
